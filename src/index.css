@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rohan-black: var(--color-rohan-black);
+  --color-rohan-deep: var(--color-rohan-deep);
+  --color-rohan-white: var(--color-rohan-white);
+  --color-rohan-red: var(--color-rohan-red);
+  --color-rohan-red-bright: var(--color-rohan-red-bright);
+  --color-rohan-red-dark: var(--color-rohan-red-dark);
+  
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+:root {
+  --color-rohan-black: #050505;
+  --color-rohan-deep: #000000;
+  --color-rohan-white: #F5F5F5;
+  --color-rohan-red: #D90000;
+  --color-rohan-red-bright: #FF1A1A;
+  --color-rohan-red-dark: #750000;
+}
+
+.light {
+  --color-rohan-black: #F5F5F5;
+  --color-rohan-deep: #FFFFFF;
+  --color-rohan-white: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-rohan-black text-rohan-white font-body antialiased transition-colors duration-500;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-normal;
+  }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #F5F5F5;
+  color: transparent;
+}
+.text-stroke-red {
+  -webkit-text-stroke: 1px #D90000;
+  color: transparent;
+}
